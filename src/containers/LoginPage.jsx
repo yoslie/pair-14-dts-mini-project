@@ -1,8 +1,9 @@
 import React from "react";
 
+import LoginOrRegisterForm from "../components/LoginOrRegisterForm";
+
 const LoginPage = () => {
-  // @todo: update login component
-  return <div>Halaman Login</div>;
+  return <LoginOrRegisterForm loginOrRegister={"login"} />;
 };
 
 export default LoginPage;

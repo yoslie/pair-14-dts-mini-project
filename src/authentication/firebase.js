@@ -43,7 +43,7 @@ const registerWithEmailAndPassword = async (email, password) => {
 };
 
 // Function for Login
-const loginDenganEmailDanPassword = async (email, password) => {
+const loginWithEmailAndPassword = async (email, password) => {
   try {
     const userCredential = await signInWithEmailAndPassword(
       auth,
@@ -83,7 +83,7 @@ const signOutFromApps = async () => {
 export {
   auth,
   registerWithEmailAndPassword,
-  loginDenganEmailDanPassword,
+  loginWithEmailAndPassword,
   resetPassword,
   signOutFromApps,
 };
