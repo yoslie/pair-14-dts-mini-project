@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-// @todo: create navbar and homepage component
 import NavBar from "./components/NavBar";
 import HomePage from "./containers/HomePage";
 
