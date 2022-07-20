@@ -1,9 +1,7 @@
-// Di sini kita harus menggunakan useEffect
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-// Pada bagian ini sekarang kita membutuhkan fungsi untuk melakukan login dan register
 import {
   auth,
   loginWithEmailAndPassword,
@@ -14,6 +12,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 const LoginOrRegisterForm = ({ loginOrRegister }) => {
   const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
   const [user, isLoading, error] = useAuthState(auth);
 
   const [credential, setCredential] = useState({
@@ -54,17 +53,14 @@ const LoginOrRegisterForm = ({ loginOrRegister }) => {
   useEffect(
     () => {
       if (isLoading) {
-        // Tampilkan loading screen (bila ada)
         return;
       }
 
-      // Lalu apabila usernya ditemukan (ada / tidak null)
-      // Maka akan kita navigasikan ke halaman HomePage
       if (user) {
         navigate("/");
       }
     },
-    // Sekarang dependency kita tergantung pada user dan isLoading dari useAuthState
+
     [user, isLoading, navigate]
   );
 
