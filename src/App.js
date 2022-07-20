@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import NavBar from "./components/NavBar";
 import HomePage from "./containers/HomePage";
+import Footer from "./components/Footer";
 
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -33,6 +34,7 @@ function App() {
     <div className="App">
       <NavBar />
       <HomePage />
+      <Footer />
     </div>
   );
 }
