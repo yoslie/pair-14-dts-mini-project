@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "@coreui/coreui/dist/css/coreui.min.css";
 
 import NavBar from "./components/NavBar";
 import HomePage from "./containers/HomePage";
