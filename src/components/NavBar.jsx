@@ -2,17 +2,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { signOutFromApps } from "../authentication/firebase";
 
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Series', href: '#' },
-  { name: 'Movies', href: '#' },
-  { name: 'New and Popular', href: '#' },
-  { name: 'My List', href: '#' }
-]
+  { name: "Home", href: "#" },
+  { name: "Series", href: "#" },
+  { name: "Movies", href: "#" },
+  { name: "New and Popular", href: "#" },
+  { name: "My List", href: "#" },
+];
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const NavBar = () => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-semiBlack-200 fixed w-full">
+    <Disclosure as="nav" className="bg-semiBlack-200 relative top-1 w-full">
       {({ open }) => (
         <>
           <div className="w-full px-2 sm:px-6 lg:px-8">
@@ -43,7 +43,7 @@ const NavBar = () => {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="h-8 w-auto"
-                    src={process.env.PUBLIC_URL+"assets/images/logo.svg"}
+                    src={process.env.PUBLIC_URL + "assets/images/logo.svg"}
                     alt="Logo Movie"
                   />
                 </div>
@@ -64,14 +64,18 @@ const NavBar = () => {
               <div className="absolute inset-y-0 space-x-2 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:space-x-4">
                 <img
                   className="h-5 w-5"
-                  src={process.env.PUBLIC_URL+"assets/icons/Search.svg"}
+                  src={process.env.PUBLIC_URL + "assets/icons/Search.svg"}
                   alt="Search"
                   aria-hidden="true"
                 />
-                <span className="text-white font-medium text-sm hidden sm:block">User</span>
+                <span className="text-white font-medium text-sm hidden sm:block">
+                  User
+                </span>
                 <img
                   className="h-5 w-5"
-                  src={process.env.PUBLIC_URL+"assets/icons/NotificationBell.svg"}
+                  src={
+                    process.env.PUBLIC_URL + "assets/icons/NotificationBell.svg"
+                  }
                   alt="Notification Bell"
                   aria-hidden="true"
                 />
@@ -82,12 +86,17 @@ const NavBar = () => {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8"
-                        src={process.env.PUBLIC_URL+"assets/icons/DefaultProfileIMG.svg"}
+                        src={
+                          process.env.PUBLIC_URL +
+                          "assets/icons/DefaultProfileIMG.svg"
+                        }
                         alt="Default Profile Img"
                       />
                       <img
                         className="h-3 w-3 ml-2"
-                        src={process.env.PUBLIC_URL+"assets/icons/DownArrow.svg"}
+                        src={
+                          process.env.PUBLIC_URL + "assets/icons/DownArrow.svg"
+                        }
                         alt="Down Arrow"
                       />
                     </Menu.Button>

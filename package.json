@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@coreui/coreui": "^4.2.0",
+    "@coreui/react": "^4.3.0",
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.3",
