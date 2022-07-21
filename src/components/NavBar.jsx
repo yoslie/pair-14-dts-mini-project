@@ -23,7 +23,7 @@ const NavBar = () => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-semiBlack-200 relative top-1 w-full">
+    <Disclosure as="nav" className="bg-semiBlack-200 relative w-full">
       {({ open }) => (
         <>
           <div className="w-full px-2 sm:px-6 lg:px-8">
@@ -110,7 +110,7 @@ const NavBar = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-black hover:bg-gray-900 ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="z-10 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-black hover:bg-gray-900 ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <button
