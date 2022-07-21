@@ -72,7 +72,7 @@ return (
         </ul>
       </div>
     </div>
-    <div className="w-32 mt-6 py-2 px-4 text-gray-600 border border-gray-600 text-sm">
+    <div className="w-36 mt-6 py-2 px-4 text-gray-600 border border-gray-600 text-sm">
       Service Code
     </div>
     <div className="mt-6 border-t border-gray-700">
